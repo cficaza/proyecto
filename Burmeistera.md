@@ -13,6 +13,6 @@ Filtrar secuencias, realizar alineamientos múltiples y generar árboles filogen
 * iqtree
 
 ## Q4. Sube una foto que represente tu organismo o grupo de organismos
-[Alt text!](https://inaturalist-open-data.s3.amazonaws.com/photos/12875007/large.jpg)
+![Alt text](https://inaturalist-open-data.s3.amazonaws.com/photos/12875007/large.jpg)
 
 
