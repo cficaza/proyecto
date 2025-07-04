@@ -45,4 +45,5 @@ Descargar las filogenias que se vayan a utilizar, en este caso serán las filoge
   $ iqtree -s muscle_sequence.fasta
 * Correr el comando "ls" y observar que se haya creado nuestra filogenia, la cual debería terminar en .treefile
 * Descargar nuestra filogenia con el siguiente comando: scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/muscle_sequence.fasta.treefile .
-* 
+* Una vez descargada nuestra filogenia subirla a figtree 
+* Finalmente dentro de figtree ir a "file" luego "open" y abrir nuestro archivo "muscle_sequence.fasta.treefile"
