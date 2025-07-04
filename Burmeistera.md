@@ -42,3 +42,4 @@ Descargar las filogenias que se vayan a utilizar, en este caso serán las filoge
   $ module load iqtree/2.2.2.6
 * Correr el programa iqtree con el archivo fasta alineado
   $ iqtree -s muscle_sequence.fasta
+* 
