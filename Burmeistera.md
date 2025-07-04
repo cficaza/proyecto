@@ -28,14 +28,17 @@ Descargar las filogenias que se vayan a utilizar, en este caso serán las filoge
 ## Q7 Cómo usar el programa
 Ingresar al programa GitBash y moverse hacia el escritorio de la computadora con el comando:
   $ cd Desktop/ 
-Una vez se encuentre dentro del escritorio crear una carpeta única para el proyecto y así evitar confusiones de los datos, para esto se usará el siguiente comando:
+Una vez se encuentre dentro del escritorio crear una carpeta que sea únicamente utilizada para el proyecto y así evitar confusiones de los datos, para esto se usará el siguiente comando:
   $ mkdir BurmeisteraProyecto
-Para este trabajo es necesario conseguir las secuencias de las especies por lo que será necesario entrar a NCBI, escoger la opción de nucleótidos y a lado en la barra de búsqueda colocar el género o la especie de la cual se está buscando la secuencia nucleotídica y seguida de la misma el gen que se quiere buscar. Descargar al escritorio
-Cambiar el formato de Phylip a Fasta con:
-  $ cp ../../Phylip2Fasta.pl ./
-Copiar el programa de muscle dentro de la carpeta del proyecto con el siguiente comando 
+Para este trabajo es necesario conseguir las secuencias de las especies por lo que será necesario entrar a NCBI, escoger la opción de nucleótidos y a lado en la barra de búsqueda colocar el género o la especie de la cual se está buscando la secuencia nucleotídica y seguida de la misma el gen que se quiere buscar. Descargar al escritorio en formato FASTA
+Copiar el programa de muscle dentro de la carpeta del proyecto la cual se encuentra en nuestro escritorio con el siguiente comando 
   $ cp ../../muscle3.8.31_i86linux64 ./
 Alinear las secuencias con el comando:
-  $
+  $ for rbcL in *.fasta
+  do
+  ./muscle3.8.31_i86linux64 -in $rbcL -out muscle_$rbcL -maxiters 1 -diags
+  done
 Cargar el programa de iqtree con el siguiente comando:
   $ module load iqtree/2.2.2.6
+Correr el programa iqtree con el archivo fasta alineado
+  $ iqtree -s muscle_sequence.fasta
