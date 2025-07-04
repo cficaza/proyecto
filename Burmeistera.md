@@ -38,8 +38,11 @@ Descargar las filogenias que se vayan a utilizar, en este caso serán las filoge
   do
   ./muscle3.8.31_i86linux64 -in $rbcL -out muscle_$rbcL -maxiters 1 -diags
   done
+* Correr el comando "ls" y observar que se haya alineado nuestra secuencia, esta debería terminar en .fasta 
 * Cargar el programa de iqtree con el siguiente comando:
   $ module load iqtree/2.2.2.6
-* Correr el programa iqtree con el archivo fasta alineado
+* Correr el programa iqtree con el archivo fasta alineado:
   $ iqtree -s muscle_sequence.fasta
+* Correr el comando "ls" y observar que se haya creado nuestra filogenia, la cual debería terminar en .treefile
+* Descargar nuestra filogenia con el siguiente comando: scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/muscle_sequence.fasta.treefile .
 * 
