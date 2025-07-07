@@ -9,11 +9,11 @@ Trabajaré con el género de plantas Burmeistera, familia Campanulaceae.
 ## Q2. Brevemente describe qué piensas hacer en tu proyecto
 Filtrar secuencias, realizar alineamientos múltiples y generar árboles filogenéticos preliminares en secuencias que tengan el gen rbcL el cual tiene como función principal codificar la proteína RuBisCO
 
-## Q3. ¿Qué programas voy a usar en mi proyecto?
-* git bash 
-* muscle 
-* fig tree
-* iqtree
+## Q3. ¿Qué programas voy a usar en mi proyecto y cómo descargarlos?
+* git bash = Entrar al link https://carpentries.github.io/workshop-template/install_instructions/#shell y escoger la opción para tu computadora en la sección "Git"
+* muscle = https://www.ebi.ac.uk/jdispatcher/msa/muscle?stype=protein
+* fig tree = Entrar al siguiente link https://github.com/rambaut/figtree/releases y descargar el zip de la versión 1.4.4
+* iqtree = https://iqtree.github.io/
 
 ## Q4. Sube una foto que represente tu organismo o grupo de organismos
 ![Alt text](https://inaturalist-open-data.s3.amazonaws.com/photos/12875007/large.jpg)
