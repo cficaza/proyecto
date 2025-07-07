@@ -1,6 +1,6 @@
 # Análisis bioinformático del gen rbcL dentro del género Burmeistera
 
-Claudia Icaza
+Autora: Claudia Icaza
 
 
 ## Q1. ¿En qué organismo o grupo de organismos vas a trabajar?
