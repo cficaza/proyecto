@@ -1,4 +1,4 @@
-# Análisis bioinformático del gen rbcL dentro del género Burmeistera
+# Análisis filogenético del gen rbcL dentro del género Burmeistera
 
 Autora: Claudia Icaza
 
