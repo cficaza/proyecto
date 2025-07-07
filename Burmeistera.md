@@ -12,8 +12,14 @@ Filtrar secuencias, realizar alineamientos múltiples y generar árboles filogen
 ## Q3. ¿Qué programas voy a usar en mi proyecto y cómo descargarlos?
 * git bash = Entrar al link https://carpentries.github.io/workshop-template/install_instructions/#shell y escoger la opción para tu computadora en la sección "Git"
 * muscle = https://www.ebi.ac.uk/jdispatcher/msa/muscle?stype=protein
-* fig tree = Entrar al siguiente link https://github.com/rambaut/figtree/releases y descargar el zip de la versión 1.4.4
-* iqtree = https://iqtree.github.io/
+* fig tree = Entrar al siguiente link https://github.com/rambaut/figtree/releases y descargar el zip "FigTree.v1.4.4.zip"
+* iqtree = https://iqtree.github.io/ descargar la versión 3.0.1
+
+  ## ¿Cómo instalarlos?
+  * git bash
+  * muscle = usar dentro del mismo link 
+  * fig tree = descomprimir el archivo zip y abrir el programa FigTree.v1.4.4
+  * iqtree = descomprimir el archivo zip, entrar a la carpeta bin y abrir el archivo iqtree3, si 
 
 ## Q4. Sube una foto que represente tu organismo o grupo de organismos
 ![Alt text](https://inaturalist-open-data.s3.amazonaws.com/photos/12875007/large.jpg)
