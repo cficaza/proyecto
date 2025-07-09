@@ -1,4 +1,4 @@
-# Análisis filogenético del gen rbcL dentro del género Burmeistera
+# Análisis filogenético del gen rps16 dentro del género Burmeistera
 
 Autora: Claudia Icaza
 
@@ -7,7 +7,7 @@ Autora: Claudia Icaza
 Trabajaré con el género de plantas Burmeistera, familia Campanulaceae.
 
 ## Q2. Brevemente describe qué piensas hacer en tu proyecto
-Filtrar secuencias, realizar alineamientos múltiples y generar árboles filogenéticos preliminares en secuencias que tengan el gen rbcL el cual tiene como función principal codificar la proteína RuBisCO
+Filtrar secuencias, realizar alineamientos múltiples y generar árboles filogenéticos preliminares en secuencias que tengan el gen rps16 el cual es un gen que codifica una proteína ribosomal que forma parte de la subunidad 40S. Pertenece a la familia S9P de proteínas ribosomales.
 
 ## Q3. ¿Qué programas voy a usar en mi proyecto y cómo descargarlos?
 * git bash = Entrar al link https://carpentries.github.io/workshop-template/install_instructions/#shell y escoger la opción para tu computadora en la sección "Git"
@@ -31,11 +31,27 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
 * Descargar los programas básicos necesarios para el análisis filogenético como muscle, iqtree y figtree
 * Descargar las filogenias que se vayan a utilizar, en este caso serán las filogenias de las cuales se tengan los datos necesarios para observar una presencia del gen dentro de las especies de Burmeistera
 
-## Q7 Cómo usar el programa
-* Ingresar al programa GitBash y moverse hacia el escritorio de la computadora con el comando:
-  $ cd Desktop/ 
-* Una vez se encuentre dentro del escritorio crear una carpeta que sea únicamente utilizada para el proyecto y así evitar confusiones de los datos, para esto se usará el siguiente comando:
-  $ mkdir BurmeisteraProyecto
+## Q7 Cómo realizar el análisis
+* Ingresar al programa GitBash
+* Entrar a hoffman con el comando:
+  $ ssh "correo institucional" y colocar la clave 
+* Pedir un nodo computacional para pedir memoria y tiempo de uso del programa con el comando:
+  $ qrsh -l h_data=7G,h_vmem=30G,h_rt=2:00:00 
+* entrar a la carpeta de SCRATCH con:
+  $ cd $SCRATCH/
+* entrar a la carpeta de la materia con:
+  $ cd Bioinformatica-PUCE/
+* entrar a la carpeta de maestrías para sacar nuestras secuencias:
+  $ cd MastBio/
+* descargarnos las secuencias del gen rps16 para el género Burmeistera
+  $  /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rps16 [GENE] AND Burmeistera[ORGN]" | efetch -format fasta > Gen_rps16_Burmeistera.zip
+* copiar el archivo en la carpeta de la materia
+  $ cp Gen_rps16_Burmeistera.zip ../
+* copiar el archivo en nuestra carpeta
+  $ cp Gen_rps16_Burmeistera.zip RediseBio/ClaudiaIc/
+* 
+
+  
 * Para este trabajo es necesario conseguir las secuencias de las especies por lo que será necesario entrar a NCBI, escoger la opción de nucleótidos y a lado en la barra de búsqueda colocar el género o la especie de la cual se está buscando la secuencia nucleotídica y seguida de la misma el gen que se quiere buscar. Descargar al escritorio en formato FASTA
 * Copiar el programa de muscle dentro de la carpeta del proyecto la cual se encuentra en nuestro escritorio con el siguiente comando 
   $ cp ../../muscle3.8.31_i86linux64 ./
