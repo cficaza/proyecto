@@ -39,19 +39,19 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
   $ ssh "correo institucional" y colocar la clave 
 * Pedir un nodo computacional para pedir memoria y tiempo de uso del programa con el comando:
   $ qrsh -l h_data=7G,h_vmem=30G,h_rt=2:00:00 
-* entrar a la carpeta de SCRATCH con:
+* Entrar a la carpeta de SCRATCH con:
   $ cd $SCRATCH/
-* entrar a la carpeta de la materia con:
+* Entrar a la carpeta de la materia con:
   $ cd Bioinformatica-PUCE/
-* entrar a la carpeta de maestrías para sacar nuestras secuencias:
+* Entrar a la carpeta de maestrías para sacar nuestras secuencias:
   $ cd MastBio/
-* descargarnos las secuencias del gen rps16 para el género Burmeistera
+* Descargarnos las secuencias del gen rps16 para el género Burmeistera
   $  /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rps16 [GENE] AND Burmeistera[ORGN]" | efetch -format fasta > Gen_rps16_Burmeistera.zip
-* copiar el archivo en nuestra carpeta del proyecto
+* Copiar el archivo en nuestra carpeta del proyecto
   $ cp Gen_rps16_Burmeistera.zip ../RediseBio/ClaudiaIc/BurmeisteraProyecto/
-* observar que nuestro archivo zip se haya copiado correctamente con el comando:
+* Observar que nuestro archivo zip se haya copiado correctamente con el comando:
   $ ls 
-*  descomprimir nuestro archivo con:
+* Descomprimir nuestro archivo con:
   $ unzip Gen_rps16_Burmeistera.zip
 * NOTA! Si el archivo no se descomprime porque no es un archivo zip hacer head a ver lo que tiene el archivo con el comando:
   $ head Gen_rps16_Burmeistera.zip
