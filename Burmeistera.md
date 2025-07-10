@@ -51,15 +51,21 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
   $ ls 
 *  descomprimir nuestro archivo con:
   $ unzip Gen_rps16_Burmeistera.zip
-*  
+* NOTA! Si el archivo no se descomprime porque no es un archivo zip hacer head a ver lo que tiene el archivo con el comando:
+  $ head Gen_rps16_Burmeistera.zip
+* Renombrar el archivo como fasta con el comando:
+  $ mv Gen_rps16_Burmeistera.zip Gen_rps16_Burmeistera.fasta
 * Copiar el programa de muscle dentro de la carpeta del proyecto la cual se encuentra en nuestro escritorio con el siguiente comando 
   $ cp ../../muscle3.8.31_i86linux64 ./
 * Alinear las secuencias con el comando:
-  $ for rbcL in *.fasta
+  $ for rps16 in *.fasta
   do
-  ./muscle3.8.31_i86linux64 -in $rbcL -out muscle_$rbcL -maxiters 1 -diags
+  ./muscle3.8.31_i86linux64 -in $rps16 -out muscle_$rps16 -maxiters 1 -diags
   done
-* Correr el comando "ls" y observar que se haya alineado nuestra secuencia, esta debería terminar en .fasta 
+* La secuencia puede ser algo pesada de correr, usar el comando: 
+* Correr el comando "ls" y observar que se haya alineado nuestra secuencia
+
+* 
 * Cargar el programa de iqtree con el siguiente comando:
   $ module load iqtree/2.2.2.6
 * Correr el programa iqtree con el archivo fasta alineado:
