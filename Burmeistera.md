@@ -20,7 +20,8 @@ Filtrar secuencias, realizar alineamientos múltiples y generar árboles filogen
   * git bash
   * muscle = usar dentro del mismo link 
   * fig tree = descomprimir el archivo zip y abrir el programa FigTree.v1.4.4
-  * iqtree = descomprimir el archivo zip, entrar a la carpeta bin y abrir el archivo iqtree3, si 
+  * iqtree = descomprimir el archivo zip, entrar a la carpeta bin y abrir el archivo iqtree3
+  * atom = descomprimir el archivo zip y aplastar en el programa "atom"
 
 ## Q4. Sube una foto que represente tu organismo o grupo de organismos
 ![Alt text](https://inaturalist-open-data.s3.amazonaws.com/photos/12875007/large.jpg)
