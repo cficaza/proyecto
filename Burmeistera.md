@@ -52,9 +52,6 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
 *  descomprimir nuestro archivo con:
   $ unzip Gen_rps16_Burmeistera.zip
 *  
-
-  
-* Para este trabajo es necesario conseguir las secuencias de las especies por lo que será necesario entrar a NCBI, escoger la opción de nucleótidos y a lado en la barra de búsqueda colocar el género o la especie de la cual se está buscando la secuencia nucleotídica y seguida de la misma el gen que se quiere buscar. Descargar al escritorio en formato FASTA
 * Copiar el programa de muscle dentro de la carpeta del proyecto la cual se encuentra en nuestro escritorio con el siguiente comando 
   $ cp ../../muscle3.8.31_i86linux64 ./
 * Alinear las secuencias con el comando:
