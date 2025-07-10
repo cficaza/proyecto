@@ -56,6 +56,8 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
   $ head Gen_rps16_Burmeistera.zip
 * Renombrar el archivo como fasta con el comando:
   $ mv Gen_rps16_Burmeistera.zip Gen_rps16_Burmeistera.fasta
+*
+* 
 * Copiar el programa de muscle dentro de la carpeta del proyecto la cual se encuentra en nuestro escritorio con el siguiente comando 
   $ cp ../../muscle3.8.31_i86linux64 ./
 * Alinear las secuencias con el comando:
@@ -63,9 +65,33 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
   do
   ./muscle3.8.31_i86linux64 -in $rps16 -out muscle_$rps16 -maxiters 1 -diags
   done
-* La secuencia puede ser algo pesada de correr, usar el comando: 
-* Correr el comando "ls" y observar que se haya alineado nuestra secuencia
+* La secuencia puede ser algo pesada de correr, para eso deberemos usar los comandos de Header, para eso entrar a la carpeta de Scripts la cual está dentro de la carpeta de Rediseño y copiar a nuestra carpeta el nano de Header:
+  $ cp Header.sh ../ClaudiaIc/BurmeisteraProyecto/
+* Modificar nuestro Header en base a nuestro proyecto con el comando:
+  $ nano Header.sh
+* los comandos que deberían estar copiados dentro de Header son:
+  #!/bin/bash
 
+#$ -l highp,h_rt=30:00:00,h_data=30G
+#$ -pe shared 1
+#$ -N CFIRGeneCalculator
+#$ -cwd
+#$ -m bea
+#$ -o /u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/GeneCalculator.out
+#$ -e /u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/GeneCalculator.err
+#$ -M dechavezv
+
+source /u/local/Modules/default/init/modules.sh
+module load iqtree/2.2.2.6
+
+alineamiento:
+
+for rps16 in *.fasta
+  do
+  ./muscle3.8.31_i86linux64 -in $rps16 -out muscle_$rps16 -maxiters 1 -diags
+  done
+* Correr el comando "ls" y observar que se haya alineado nuestra secuencia
+*
 * 
 * Cargar el programa de iqtree con el siguiente comando:
   $ module load iqtree/2.2.2.6
