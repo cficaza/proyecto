@@ -89,8 +89,9 @@ for rps16 in *.fasta
   done
 * Para correr nuestro alineamiento usar el comando:
   $ qsub Header.sh 
-* Verificar que se esté corriendo nuestro alineamiento:
+* Verificar que se esté corriendo nuestro alineamiento con:
   $ myjobs
+* Verificar que salga r en state, eso significa que está corriendo 
 *
 *
 * Modificar nuestro Header en base a nuestro proyecto con el comando:
