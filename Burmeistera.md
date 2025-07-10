@@ -14,6 +14,7 @@ Filtrar secuencias, realizar alineamientos múltiples y generar árboles filogen
 * muscle = https://www.ebi.ac.uk/jdispatcher/msa/muscle?stype=protein
 * fig tree = Entrar al siguiente link https://github.com/rambaut/figtree/releases y descargar el zip "FigTree.v1.4.4.zip"
 * iqtree = https://iqtree.github.io/ descargar la versión 3.0.1
+* atom = https://github.com/atom/atom/releases/tag/v1.60.0 descargar el source code (zip) 
 
   ## ¿Cómo instalarlos?
   * git bash
