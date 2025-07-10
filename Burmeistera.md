@@ -45,11 +45,13 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
   $ cd MastBio/
 * descargarnos las secuencias del gen rps16 para el género Burmeistera
   $  /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rps16 [GENE] AND Burmeistera[ORGN]" | efetch -format fasta > Gen_rps16_Burmeistera.zip
-* copiar el archivo en la carpeta de la materia
-  $ cp Gen_rps16_Burmeistera.zip ../
-* copiar el archivo en nuestra carpeta
-  $ cp Gen_rps16_Burmeistera.zip RediseBio/ClaudiaIc/
-* 
+* copiar el archivo en nuestra carpeta del proyecto
+  $ cp Gen_rps16_Burmeistera.zip ../RediseBio/ClaudiaIc/BurmeisteraProyecto/
+* observar que nuestro archivo zip se haya copiado correctamente con el comando:
+  $ ls 
+*  descomprimir nuestro archivo con:
+  $ unzip Gen_rps16_Burmeistera.zip
+*  
 
   
 * Para este trabajo es necesario conseguir las secuencias de las especies por lo que será necesario entrar a NCBI, escoger la opción de nucleótidos y a lado en la barra de búsqueda colocar el género o la especie de la cual se está buscando la secuencia nucleotídica y seguida de la misma el gen que se quiere buscar. Descargar al escritorio en formato FASTA
