@@ -63,7 +63,7 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
   do
   ./muscle3.8.31_i86linux64 -in $rps16 -out muscle_$rps16 -maxiters 1 -diags
   done
-* Si la secuencia no corre es porque puede ser algo pesada, para eso deberemos usar los comandos de Header, para eso entrar a la carpeta de Scripts la cual está dentro de la carpeta de Rediseño y copiar a nuestra carpeta el nano de Header:
+* Si la secuencia no corre es porque puede ser algo pesada, para eso deberemos usar los comandos de Header por lo que deberemos cancaelar el primer alineamiento con ctrl + C, luego entrar a la carpeta de Scripts la cual está dentro de la carpeta de Rediseño y copiar a nuestra carpeta del proyecto el nano de Header:
   $ cp Header.sh ../ClaudiaIc/BurmeisteraProyecto/
 * Modificar Header con:
   $ #!/bin/bash
