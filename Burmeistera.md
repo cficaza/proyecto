@@ -65,6 +65,31 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
   done
 * Si la secuencia no corre es porque puede ser algo pesada, para eso deberemos usar los comandos de Header, para eso entrar a la carpeta de Scripts la cual está dentro de la carpeta de Rediseño y copiar a nuestra carpeta el nano de Header:
   $ cp Header.sh ../ClaudiaIc/BurmeisteraProyecto/
+* Modificar Header con:
+  $ #!/bin/bash
+
+#$ -l highp,h_rt=30:00:00,h_data=30G
+#$ -pe shared 1
+#$ -N CFIRGeneCalculator
+#$ -cwd
+#$ -m bea
+#$ -o /u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/GeneCalculator.out
+#$ -e /u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/GeneCalculator.err
+#$ -M dechavezv
+
+source /u/local/Modules/default/init/modules.sh
+module load iqtree/2.2.2.6
+
+alineamiento:
+
+for rps16 in *.fasta
+  do
+  ./muscle3.8.31_i86linux64 -in $rps16 -out muscle_$rps16 -maxiters 1 -diags
+  done
+* Para correr nuestro alineamiento usar el comando:
+  $ qsub Header.sh 
+* Verificar que se esté corriendo nuestro alineamiento:
+  $ myjobs
 *
 *
 * Modificar nuestro Header en base a nuestro proyecto con el comando:
