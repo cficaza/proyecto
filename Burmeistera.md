@@ -32,3 +32,7 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
 ## Q6 Requisitos para ejecutar el programa
 * Descargar los programas básicos necesarios para el análisis filogenético como muscle, iqtree y figtree
 * Descargar las filogenias que se vayan a utilizar, en este caso serán las filogenias de las cuales se tengan los datos necesarios para observar una presencia del gen dentro de las especies de Burmeistera
+
+## Q7 Conclusiones del análisis 
+* Las ramas largas sugieren una mayor divergencia genética entre los grupos principales
+* El grupo de la derecha tiene ramas más cortas entre sí, lo que indica menor divergencia dentro de ese clado
