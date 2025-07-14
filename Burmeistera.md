@@ -64,44 +64,29 @@ Estudiar la diversidad genética y relaciones evolutivas dentro del género.
   do
   ./muscle3.8.31_i86linux64 -in $rps16 -out muscle_$rps16 -maxiters 1 -diags
   done
-* Si la secuencia no corre es porque puede ser algo pesada, para eso deberemos usar los comandos de Header por lo que deberemos cancaelar el primer alineamiento con ctrl + C, luego entrar a la carpeta de Scripts la cual está dentro de la carpeta de Rediseño y copiar a nuestra carpeta del proyecto el nano de Header:
-  $ cp Header.sh ../ClaudiaIc/BurmeisteraProyecto/
-* Modificar Header con:
-  $ #!/bin/bash
-
-#$ -l highp,h_rt=30:00:00,h_data=30G
-#$ -pe shared 1
-#$ -N CFIRGeneCalculator
-#$ -cwd
-#$ -m bea
-#$ -o /u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/GeneCalculator.out
-#$ -e /u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/GeneCalculator.err
-#$ -M dechavezv
-
-source /u/local/Modules/default/init/modules.sh
-module load iqtree/2.2.2.6
-
-alineamiento:
-
-for rps16 in *.fasta
-  do
-  ./muscle3.8.31_i86linux64 -in $rps16 -out muscle_$rps16 -maxiters 1 -diags
-  done
-* Para correr nuestro alineamiento usar el comando:
-  $ qsub Header.sh 
-* Verificar que se esté corriendo nuestro alineamiento con:
-  $ myjobs
-* Verificar que salga r en state, eso significa que está corriendo 
-*
-*
-*
-*
-* 
+*Si la secuencia no corre rápido puede deberse a que es una secuencia muy pesada, para eso recortaremos las secuencias para que tengan una misma longitud final de 3000, esto se hará con el comando:
+  $ awk '
+  BEGIN {RS=">"; FS="\n"}
+  NR > 1 {
+    header = $1
+    seq = ""
+    for(i=2; i<=NF; i++) seq = seq $i
+    print ">" header
+    print substr(seq, 1, 3000)
+  }
+' Gen_rps16_Burmeistera.fasta > Gen_rps16_recortado3000.fasta
+* Una vez realizado el corte correr la secuencia nuevamente 
+* Realizar el comando ls y verificar que nuestro archivo muscle se haya generado correctamente con el comando:
+  $ cat muscle_Gen_rps16_recortado3000.fasta
 * Cargar el programa de iqtree con el siguiente comando:
   $ module load iqtree/2.2.2.6
 * Correr el programa iqtree con el archivo fasta alineado:
-  $ iqtree -s muscle_sequence.fasta
+  $ iqtree -s muscle_Gen_rps16_recortado3000.fasta
 * Correr el comando "ls" y observar que se haya creado nuestra filogenia, la cual debería terminar en .treefile
-* Descargar nuestra filogenia con el siguiente comando: scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/muscle_sequence.fasta.treefile .
+* Una vez observado nuestra filogenia ir a una terminal nueva de git bash y entrar al escritorio con el comando:
+  $ cd Desktop/
+* OJO! El comando anterior puede variar
+* Descargar nuestra filogenia con el siguiente comando: scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RediseBio/ClaudiaIc/BurmeisteraProyecto/muscle_Gen_rps16_recortado3000.fasta.treefile .
 * Una vez descargada nuestra filogenia subirla a figtree 
-* Finalmente dentro de figtree ir a "file" luego "open" y abrir nuestro archivo "muscle_sequence.fasta.treefile"
+* Finalmente dentro de figtree ir a "file" luego "open" y abrir nuestro archivo "muscle_Gen_rps16_recortado3000.fasta.treefile"
+* Una vez realizado este último paso nuestra filogenia final aparece
