@@ -17,8 +17,8 @@ Filtrar secuencias, realizar alineamientos múltiples y generar árboles filogen
 * atom = https://github.com/atom/atom/releases/tag/v1.60.0 descargar el source code (zip) 
 
   ## ¿Cómo instalarlos?
-  * git bash
-  * muscle = usar dentro del mismo link 
+  * git bash = abrir directamente
+  * muscle = abrir directamente 
   * fig tree = descomprimir el archivo zip y abrir el programa FigTree.v1.4.4
   * iqtree = descomprimir el archivo zip, entrar a la carpeta bin y abrir el archivo iqtree3
   * atom = descomprimir el archivo zip y aplastar en el programa "atom"
